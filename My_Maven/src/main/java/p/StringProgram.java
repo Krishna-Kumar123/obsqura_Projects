@@ -6,15 +6,13 @@ public class StringProgram {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter string");
 		String s = sc.next();
-		StringBuilder s1 = new StringBuilder(s);
-		StringBuilder s2 = s1.reverse();
-		StringBuilder s3 = new StringBuilder(s);
-		
-		
+		StringBuffer s1 = new StringBuffer(s);
+		s1.reverse();
+		String s2 = new String(s1);
 		System.out.println(s2);
-		System.out.println(s3);
+		System.out.println(s);
 		
-		if(s3==s2)
+		if(s2.equalsIgnoreCase(s)==true)
 		{
 			System.out.println("String is palindrome");
 		}
